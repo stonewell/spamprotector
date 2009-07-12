@@ -1,0 +1,326 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resourcesp.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resourcesp.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SpamProtectorsp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SpamProtector.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    MENUITEM "OK",                          ID_OK32790
+END
+
+IDR_EDIT_PATTERN_LIST MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Add Pattern...",              ID_EDIT_ADDPATTERN
+        MENUITEM "Edit Pattern...",             ID_EDIT_EDITPATTERN
+        MENUITEM "Remove Pattern",              ID_EDIT_REMOVEPATTERN
+        MENUITEM SEPARATOR
+        MENUITEM "Remove All",                  ID_EDIT_REMOVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "Save && Close",               ID_MENU_SAVECLOSE
+        MENUITEM "Close",                       IDCANCEL
+    END
+END
+
+IDR_SPAM_PROTECTOR MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Save All",                    ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Save && Close",               ID_FILE_SAVECLOSE
+        MENUITEM "Close",                       IDOK
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Always Trust Contacts",       ID_OPTIONS_ALWAYSTRUSTCONTACTS
+        MENUITEM "Use White List",              ID_OPTIONS_USEWHITELIST
+        MENUITEM "Edit White List ...",         ID_OPTIONS_EDITWHITELIST
+        MENUITEM "Use Black List",              ID_OPTIONS_USEBLACKLIST
+        MENUITEM "Edit Black List ...",         ID_OPTIONS_EDITBLACKLIST
+        MENUITEM "Use Content Filter",          ID_OPTIONS_USECONTENTFILTER
+        MENUITEM "Edit Content Filter ...",     ID_OPTIONS_EDITCONTENTFILTER
+        MENUITEM SEPARATOR
+        MENUITEM "View Blocked SMS ...",        ID_OPTIONS_VIEWBLOCKEDSMS
+        MENUITEM "View Blocked Incoming Calls ...", ID_OPTIONS_VIEWBLOCKEDINCOMINGCALLS
+    END
+END
+
+IDR_EDIT_PATTERN MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Add Action ...",              ID_MENU_ADDACTION
+        MENUITEM "Edit Action ...",             ID_MENU_EDITACTION
+        MENUITEM "Remove Action",               ID_MENU_REMOVEACTION
+        MENUITEM SEPARATOR
+        MENUITEM "Remove All Actions",          ID_MENU_REMOVEALLACTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "Save && Close",               IDOK
+        MENUITEM "Close",                       IDCANCEL
+    END
+END
+
+IDR_EDIT_ACTION MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        POPUP "Action Type"
+        BEGIN
+            MENUITEM "No Action",                   ID_ACTIONTYPE_NOACTION
+        END
+        MENUITEM "Select Move To Folder ...",   ID_MENU_SELECTMOVETOFOLDER
+        MENUITEM "Select Reply SMS TO ...",     ID_MENU_SELECTREPLYSMSTO
+        MENUITEM SEPARATOR
+        MENUITEM "Save && Close",               IDOK
+        MENUITEM "Close",                       IDCANCEL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SPAMPROTECTOR_DIALOG DIALOG  0, 0, 145, 116
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Spam Protector"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Always Trust Persons in Contact List",IDC_CHK_CONTACTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,131,10
+    CONTROL         "Use White List",IDC_CHK_WHITE_LIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,61,10
+    PUSHBUTTON      "Edit White List",IDC_BTN_WHITE_LIST,72,18,66,14
+    CONTROL         "Use Black List",IDC_CHK_BLACK_LIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,36,59,10
+    PUSHBUTTON      "Edit Black List",IDC_BTN_BLACK_LIST,72,34,66,14
+    CONTROL         "Use Content Filter",IDC_CHK_CONTENT_FILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,50,74,10
+    PUSHBUTTON      "Edit Content Filter",IDC_BTN_CONTENT_FILTER,17,61,119,14
+    PUSHBUTTON      "Blocked SMS",IDC_BTN_BLOCKED_SMS,7,78,131,14
+    PUSHBUTTON      "Blocked Incoming Call",IDC_BTN_BLOCKED_INCOMING_CALL,7,95,131,14
+END
+
+IDD_EDIT_PATTERN_LIST_DIALOG DIALOG  0, 0, 145, 116
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LISTBOX         IDC_LST_PATTERNS,7,7,131,102,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EDIT_PATTERN_DIALOG DIALOG  0, 0, 146, 109
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Pattern"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Match",IDC_RDO_MATCH,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,7,35,10
+    CONTROL         "Not Match",IDC_RDO_NOT_MATCH,"Button",BS_AUTORADIOBUTTON,75,7,49,10
+    EDITTEXT        IDC_EDT_PATTERN,7,18,132,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LST_ACTIONS,7,35,132,67,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EDIT_ACTION_DIALOG DIALOG  0, 0, 149, 109
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Action"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Action Type:",IDC_STATIC,7,7,42,8
+    COMBOBOX        IDC_CBO_ACTION_TYPE,7,16,135,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Move To Folder:",IDC_STATIC,7,31,53,8
+    EDITTEXT        IDC_EDT_DEST_FOLDER,7,40,117,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_SEL_DEST_FOLDER,126,40,16,14
+    LTEXT           "Reply SMS:",IDC_STATIC,7,55,37,8
+    EDITTEXT        IDC_EDT_REPLY_SMS,7,64,135,14,ES_AUTOHSCROLL
+    LTEXT           "Reply SMS To:",IDC_STATIC,7,79,47,8
+    EDITTEXT        IDC_EDT_REPLY_SMS_TO,7,88,117,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_SEL_REPLY_SMS_TO,126,88,16,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SpamProtector.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "SpamProtector.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SPAMPROTECTOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 138
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_EDIT_PATTERN_LIST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 138
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_EDIT_PATTERN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 139
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_EDIT_ACTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_OK                  "Ok"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SpamProtectorsp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
